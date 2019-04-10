@@ -1,0 +1,29 @@
+{
+	"id": 3,
+	"nombreUsuario": "Dylan",
+	"idioma": "Amharic",
+	"tipoUsuario": "Mymm",
+	"informacionPersonal": "id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in",
+	"preferencia": "Why why why, pero soy feliz",
+	"facturas": [{
+			"id": 6,
+			"costo": 85,
+			"descripcion": "urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi"
+		},
+		{
+			"id": 7,
+			"costo": 25,
+			"descripcion": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum"
+		},
+		{
+			"id": 8,
+			"costo": 99,
+			"descripcion": "nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam"
+		}
+	],
+	"tarjetaDeCredito": {
+		"numero": "6333375429278519",
+		"banco": "Double, The",
+		"codigoSeguridad": 89
+	}
+}

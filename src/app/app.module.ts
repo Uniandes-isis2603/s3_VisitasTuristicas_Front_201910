@@ -13,6 +13,9 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
+import { InicioModule } from './inicio/inicio.module';
+import { ViajeroModule } from './viajero/viajero.module';
+import { Viajero } from './viajero/viajero';
 
 
 
@@ -38,7 +41,9 @@ import {AuthModule} from './auth/auth.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        InicioModule,
+        ViajeroModule
     ],
     bootstrap: [AppComponent],
     providers: [

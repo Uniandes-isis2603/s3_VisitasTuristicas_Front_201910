@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-6">
+      <br>
+      <h2 class="text-center">Crear un viajero</h2>
+      <br>
+      <form name="viajeroDetail" (ngSubmit)="f.form.valid && createCliente()" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label for="viajeroName"><b>Nombre de usuario</b></label>
+              <input type="text" name="viajeroName" class="form-control" id="viajeroName" [(ngModel)]="viajeroDetail.nombreUsuario"
+                  #viajeroName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroName.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un nombre valido</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="clienteIdioma"><b>Idioma deseado</b></label>
+              <input type = "text" name="clienteIdioma" class="form-control" id="clienteIdioma" [(ngModel)]="viajeroDetail.idioma"
+                  #clienteIdioma="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteIdioma.invalid }"
+                  required>
+              <div class="invalid-feedback">
+                  <div>Falta el idioma</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="viajeroTipoDeUsuario"><b>Tipo de usuario</b></label>
+                  <select name="viajeroTipoDeUsuario" class="form-control" id="viajeroTipoDeUsuario" [(ngModel)]="viajeroDetail.tipoDeUsuario"
+                  #viajeroTipoDeUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroTipoDeUsuario.invalid }" required>
+                    <option>Administrador</option>
+                    <option>Cliente</option>
+                  </select>
+          </div>
+          <div class="form-group">
+              <label for="viajeroInformacionPersonal"><b>Información personal</b></label>
+                <textarea name="viajeroInformacionPersonal" maxlength=255 class="form-control" id="viajeroInformacionPersonal" [(ngModel)]="viajeroDetail.informacionPersonal"
+                #viajeroInformacionPersonal="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                required></textarea>
+              <div class="invalid-feedback">
+                  <div>Por favor introduzca información válida</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="viajeroPreferencias"><b>Preferencias</b></label>
+                <textarea name="viajeroPreferencias" maxlength=255 class="form-control" id="viajeroPreferencias" [(ngModel)]="viajeroDetail.preferencias"
+                #viajeroPreferencias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroPreferencias.invalid }"
+                required></textarea>
+              <div class="invalid-feedback">
+                  <div>Por favor introduzca información válida</div>
+              </div>
+          </div>
+          <div class="row form-inline justify-content-center align-self-center">
+            <div *ngIf = "creandoTarjeta">
+              <button type="submit" class="btn btn-primary">Crear usuario</button>
+              <div class="divider"></div>
+            </div>
+          </div>
+      </form>
+  </div>
+    <div class="col-6">
+    <br>
+    <h2 class="text-center">Crear la tarjeta de crédito</h2>
+    <br>
+          <form name="tarjetaDeCredito" (ngSubmit)="f.form.valid && createTarjeta()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="tarjetaNumero"><b>Numero de la tarjeta</b></label>
+              <input type="text" name="tarjetaNumero" class="form-control" id="tarjetaNumero" [(ngModel)]="tarjeta.numero"
+                  #tarjetaNumero="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaNumero.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un número válido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tarjetaBanco"><b>Banco de la tarjeta</b></label>
+              <input type="text" name="tarjetaBanco" class="form-control" id="tarjetaBanco" [(ngModel)]="tarjeta.banco"
+                  #tarjetaBanco="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaBanco.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un banco válido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tarjetaCodigo"><b>Código de seguridad</b></label>
+              <input type="number" name="tarjetaCodigo" class="form-control" id="tarjetaCodigo" [(ngModel)]="tarjeta.codigoSeguridad"
+                  #tarjetaCodigo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaCodigo.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un banco válido</div>
+              </div>
+            </div>
+            <div class="row form-inline justify-content-center align-self-center">
+              <button type="submit" class="btn btn-primary">Crear tarjeta de crédito</button>
+              <div class="divider"></div>
+            </div>
+          </form>
+  </div>
+</div>

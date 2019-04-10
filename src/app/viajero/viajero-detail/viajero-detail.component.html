@@ -1,3 +1,79 @@
-<p>
-  viajero-detail works!
-</p>
+<div class="col-md-12">
+  <div class="container-fluid">   
+      <h1 class="h1 p-3 text-wrap font-weight-bold text-danger text-center">Nombre: {{viajeroDetail.nombreUsuario}}</h1>
+      <p class="h1 p-3 text-center">Información del usuario:</p>
+      <p class="p-3 text-justify"> {{viajeroDetail.informacionPersonal}}</p>
+      <p class="h1 p-3 text-center">Preferencias:</p>
+      <p class="p-3 text-justify"> {{viajeroDetail.preferencia}}</p>
+  </div>
+  <div class = "row">
+    <div class = "col-6">
+      <p class="h1 p-3 text-center"> Tarjeta de crédito:</p>
+    <table class="table table-striped table-sm">
+      <thead class="table-success">
+        <tr>
+          <th>Numero</th>
+          <th>Banco</th>
+          <th>Código De Seguridad</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="cursor: pointer;">
+            <a>{{viajeroDetail.tarjetaDeCredito.numero}}</a>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption">{{viajeroDetail.tarjetaDeCredito.banco}}</p>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption">{{viajeroDetail.tarjetaDeCredito.codigoSeguridad}}</p>
+          </td>
+          <td>
+            <button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class = "col-6">
+  <p class="h3 p-3 text-center">Facturas:</p>
+  <div *ngIf="!crearFactura">
+   <table class="table table-striped table-sm">
+      <thead class="table-warning">
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Costo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of viajeroDetail.facturas">
+          <td style="cursor: pointer;">
+            <a>{{i.id}}</a>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption text-justify">{{i.descripcion}}</p>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption">{{i.costo}}</p>
+          </td>
+          <td>
+            <button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div *ngIf = "crearFactura">
+      <app-crear-factura [viajero] = "viajeroDetail"></app-crear-factura>
+    </div>  
+    <div *ngIf="!crearFactura">
+      <button class="btn-outline-success" (click)="cambiarBoolean()">Añadir una factura al usuario</button>
+    </div>
+    <div *ngIf="crearFactura">
+      <button class="btn-outline-danger" (click)="cambiarBoolean()">Cancelar creración de factura</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+{
+	"id": 2,
+	"nombreUsuario": "Worden",
+	"idioma": "Swahili",
+	"tipoUsuario": "Flashdog",
+	"informacionPersonal": "nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+	"preferencia": "Que carajos, no puedo creer que esté funcionando",
+	"facturas": [{
+			"id": 4,
+			"costo": 84,
+			"descripcion": "turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin"
+		},
+		{
+			"id": 5,
+			"costo": 30,
+			"descripcion": "cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros"
+		}
+	],
+	"tarjetaDeCredito": {
+		"numero": "3559456105413945",
+		"banco": "Rashomon (Rashômon)",
+		"codigoSeguridad": 97
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"id": 1,
+	"nombreUsuario": "Dev",
+	"idioma": "Māori",
+	"tipoUsuario": "Twiyo",
+	"informacionPersonal": "quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien",
+  "preferencia": "Is this the real life, is this just fantasy",
+	"facturas": [{
+			"id": 1,
+			"costo": 11,
+			"descripcion": "suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus"
+		},
+		{
+			"id": 2,
+			"costo": 49,
+			"descripcion": "bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at"
+		},
+		{
+			"id": 3,
+			"costo": 53,
+			"descripcion": "tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea"
+		}
+	],
+	"tarjetaDeCredito": {
+		"numero": "6388264405970964",
+		"banco": "Ninth Gate, The",
+		"codigoSeguridad": 57
+	}
+}

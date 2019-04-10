@@ -1,3 +1,68 @@
-<p>
-  listar-viajero works!
-</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+			<table class="table table-striped table-sm">
+				<thead class="table-primary">
+					<tr>
+						<th>ID</th>
+            <th>Nombre</th>
+            <th>Idioma</th>
+            <th>Tipo</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let i of viajero">
+						<td>
+							<a>{{i.id}}</a>
+						</td>
+            <td>
+							<p class="figure-caption">{{i.nombreUsuario}}</p>
+						</td>
+            <td>
+							<p class="figure-caption">{{i.idioma}}</p>
+						</td>
+            <td>
+							<p class="figure-caption">{{i.tipoUsuario}}</p>
+						</td>
+            <td>
+							<button class="btn btn-outline-primary" style="cursor: pointer;" (click)="onSelected(i.id)" routerLink="viajeros/id">Visualizar Usuario</button>
+						</td>
+            <td>
+							<button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+			<div *ngIf="selectedViajero && !crearCliente">
+				<app-viajero-detail [viajeroDetail]="selectedViajero"> </app-viajero-detail>
+			</div>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+      <div *ngIf="!crearCliente">
+			  <button class="btn-outline-success btn-lg btn-block" (click)="cambiarBoolean()">crear Usuario Desde Cero</button>
+      </div>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+			<div *ngIf="crearCliente">
+				<app-crear-viajero></app-crear-viajero>
+			</div>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+      <div *ngIf="crearCliente">
+			  <button class="btn-outline-danger btn-lg btn-block" (click)="cambiarBoolean()">Cancelar creacion del usuario</button>
+      </div>
+		</div>
+	</div>
+</div>
