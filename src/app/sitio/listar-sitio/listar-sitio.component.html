@@ -29,7 +29,7 @@
  <div class="border row">
 		<div class="col">
       <div *ngIf="!crearSitio">
-			  <button class="btn-outline-success btn-lg btn-block" >crear Sitio Desde Cero</button>
+			  <button class="btn-outline-success btn-lg btn-block" (click) = "cambiarBooleano()">crear Sitio Desde Cero</button>
       </div>
 		</div>
 	</div>
@@ -43,7 +43,7 @@
   <div class="border row">
 		<div class="col">
       <div *ngIf="crearSitio">
-			  <button class="btn-outline-danger btn-lg btn-block" >Cancelar creacion del Sitio</button>
+			  <button class="btn-outline-danger btn-lg btn-block" (click) = "cambiarBooleano()" >Cancelar creacion del Sitio</button>
       </div>
 		</div>
 	</div>

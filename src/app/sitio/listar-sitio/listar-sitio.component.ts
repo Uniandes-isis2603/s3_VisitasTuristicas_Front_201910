@@ -15,12 +15,16 @@ export class ListarSitioComponent implements OnInit {
 
   sitio: Sitio[];  
 
+  crearSitio: boolean;
+
   getSitios(): void {
     this.sitioService.getSitios().subscribe(cliente => this.sitio = cliente);
   }
 
  
-  
+  cambiarBooleano(): void{
+    this.crearSitio = !this.crearSitio;
+  }
 
   ngOnInit() {
     this.getSitios();

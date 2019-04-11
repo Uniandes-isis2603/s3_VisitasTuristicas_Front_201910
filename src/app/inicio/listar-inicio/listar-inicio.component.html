@@ -40,9 +40,7 @@
           Sitios turisticos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ver sitios turisticos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Crear sitio turistico</a>
+          <a class="dropdown-item" [routerLink]="[{ outlets: { primary: ['listar-sitio'],sidebar: ['listar-sitio'] } }]" routerLinkActive="active">Ver sitios turisticos</a>
         </div>
       </li>
     </ul>
@@ -50,5 +48,3 @@
   </div>
 </nav>
 
-<h1 align='center'>Proyecto 1</h1>
-<p class="lead" align='center'>Cumple tus expectativas, manejando efectivamente todos tus requerimientos.</p>

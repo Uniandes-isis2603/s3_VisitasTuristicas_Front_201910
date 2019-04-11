@@ -8,6 +8,7 @@ import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component
 import { ListarInicioComponent } from 'app/inicio/listar-inicio/listar-inicio.component';
 import { ListarViajeroComponent } from 'app/viajero/listar-viajero/listar-viajero.component';
 import { ListarPlanturisticoComponent } from 'app/plan-turistico/listar-planturistico/listar-planturistico.component';
+import { ListarSitioComponent } from 'app/sitio/listar-sitio/listar-sitio.component';
 
 const routes: Routes = [
 
@@ -52,6 +53,11 @@ const routes: Routes = [
     {
         path: 'listar-plan',
         component: ListarPlanturisticoComponent,
+        outlet: 'sidebar'
+    },
+    {
+        path: 'listar-sitio',
+        component: ListarSitioComponent,
         outlet: 'sidebar'
     }
 ];

@@ -6,7 +6,7 @@
       <form name="sitio" (ngSubmit)="f.form.valid && createSitio()" #f="ngForm" novalidate>
           <div class="form-group">
               <label for="sitioName"><b>Nombre de Sitio</b></label>
-              <input type="text" name="sitioName" class="form-control" id="sitioName" [(ngModel)]="sitio.name"
+              <input type="text" name="sitioName" class="form-control" id="sitioName" [(ngModel)]="sitio.nombre"
                   #sitioName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioName.invalid }" required>
               <div class="invalid-feedback">
                   <div>Introducir un nombre valido</div>

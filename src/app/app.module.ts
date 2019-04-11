@@ -47,11 +47,8 @@ import {SitioModule} from './sitio/sitio.module';
         NgbModule,
         InicioModule,
         ViajeroModule,
-<<<<<<< HEAD
-        PlanturisticoModule
-=======
+        PlanturisticoModule,
         SitioModule
->>>>>>> 370d866a268c33444bd5b68bdcc82ad807d3c572
     ],
     bootstrap: [AppComponent],
     providers: [
