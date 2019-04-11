@@ -1,0 +1,38 @@
+{
+    "id": 1,
+    "nombrePlan": "Twogether",
+    "tipoPlan": "a suscipit nulla",
+    "costoPorPersona": 58,
+    "descripcion": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "ubicacion": "Panjiang",
+    "guia": true,
+    "duracion": 34,
+    "idioma": "Hindi",
+    "blogsDeViajero":
+    [{
+    "id": 1,
+    "comentarios": "vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit",
+    "sugerencias": "suspendisse potenti cras in purus eu magna vulputate luctus cum",
+    "likes": 44
+  }, {
+    "id": 2,
+    "comentarios": "eget tincidunt eget tempus vel pede morbi porttitor lorem id",
+    "sugerencias": "at nulla suspendisse potenti cras in purus eu magna vulputate",
+    "likes": 82
+  }, {
+    "id": 3,
+    "comentarios": "eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis",
+    "sugerencias": "porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor",
+    "likes": 2
+  }, {
+    "id": 4,
+    "comentarios": "ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi",
+    "sugerencias": "dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
+    "likes": 44
+  }, {
+    "id": 5,
+    "comentarios": "nunc proin at turpis a pede posuere nonummy integer non",
+    "sugerencias": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+    "likes": 95
+  }]
+  }

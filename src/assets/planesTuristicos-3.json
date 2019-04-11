@@ -1,0 +1,38 @@
+{
+    "id": 3,
+    "nombrePlan": "Year Zero: The Silent Death of Cambodia",
+    "tipoPlan": "dolor morbi vel",
+    "costoPorPersona": 35,
+    "descripcion": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
+    "ubicacion": "Al Madān",
+    "guia": false,
+    "duracion": 61,
+    "idioma": "Khmer",
+    "blogsDeViajero":
+    [{
+    "id": 1,
+    "comentarios": "vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit",
+    "sugerencias": "suspendisse potenti cras in purus eu magna vulputate luctus cum",
+    "likes": 44
+  }, {
+    "id": 2,
+    "comentarios": "eget tincidunt eget tempus vel pede morbi porttitor lorem id",
+    "sugerencias": "at nulla suspendisse potenti cras in purus eu magna vulputate",
+    "likes": 82
+  }, {
+    "id": 3,
+    "comentarios": "eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis",
+    "sugerencias": "porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor",
+    "likes": 2
+  }, {
+    "id": 4,
+    "comentarios": "ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi",
+    "sugerencias": "dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
+    "likes": 44
+  }, {
+    "id": 5,
+    "comentarios": "nunc proin at turpis a pede posuere nonummy integer non",
+    "sugerencias": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+    "likes": 95
+  }]
+  }

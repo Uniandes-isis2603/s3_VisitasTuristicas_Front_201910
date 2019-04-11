@@ -7,6 +7,7 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { ListarInicioComponent } from 'app/inicio/listar-inicio/listar-inicio.component';
 import { ListarViajeroComponent } from 'app/viajero/listar-viajero/listar-viajero.component';
+import { ListarPlanturisticoComponent } from 'app/plan-turistico/listar-planturistico/listar-planturistico.component';
 
 const routes: Routes = [
 
@@ -46,6 +47,11 @@ const routes: Routes = [
     {
         path: 'listar-cliente',
         component: ListarViajeroComponent,
+        outlet: 'sidebar'
+    },
+    {
+        path: 'listar-plan',
+        component: ListarPlanturisticoComponent,
         outlet: 'sidebar'
     }
 ];

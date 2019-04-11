@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Crear un plan turistico</h2>
+        <br>
+        <form name="PlanturisticoDetail" (ngSubmit)="f.form.valid && createPlanTuristico()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="planTuristicoName"><b>Nombre de plan</b></label>
+                <input type="text" name="planTuristicoName" class="form-control" id="planTuristicoName" [(ngModel)]="planTuristicoDetail.nombreUsuario"
+                    #planTuristicoName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && planTuristicoName.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Introducir un nombre valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Idioma"><b>Idioma del plan</b></label>
+                <input type = "text" name="Idioma" class="form-control" id="Idioma" [(ngModel)]="viajeroDetail.idioma"
+                    #clienteIdioma="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteIdioma.invalid }"
+                    required>
+                <div class="invalid-feedback">
+                    <div>Falta el Idioma</div>
+                </div>
+            </div>
+           
+           <div class="form-group">
+                <label for="viajeroInformacionPersonal"><b>Tipo Plan</b></label>
+                  <textarea name="viajeroInformacionPersonal" maxlength=255 class="form-control" id="viajeroInformacionPersonal" [(ngModel)]="viajeroDetail.informacionPersonal"
+                  #viajeroInformacionPersonal="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                  required></textarea>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="viajeroInformacionPersonal"><b>Descripcion</b></label>
+                  <textarea name="viajeroInformacionPersonal" maxlength=255 class="form-control" id="viajeroInformacionPersonal" [(ngModel)]="viajeroDetail.informacionPersonal"
+                  #viajeroInformacionPersonal="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                  required></textarea>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="viajeroPreferencias"><b>Costo por persona</b></label>
+                  <textarea name="viajeroPreferencias" maxlength=255 class="form-control" id="viajeroPreferencias" [(ngModel)]="viajeroDetail.preferencias"
+                  #viajeroPreferencias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroPreferencias.invalid }"
+                  required></textarea>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="viajeroInformacionPersonal"><b>Duracion</b></label>
+                  <textarea name="viajeroInformacionPersonal" maxlength=255 class="form-control" id="viajeroInformacionPersonal" [(ngModel)]="viajeroDetail.informacionPersonal"
+                  #viajeroInformacionPersonal="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                  required></textarea>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+            <div class="row form-inline justify-content-center align-self-center">
+              <div >
+                <button type="submit" class="btn btn-primary">Crear plan</button>
+                <div class="divider"></div>
+              </div>
+            </div>
+        </form>
+    </div>
+      
+</div>

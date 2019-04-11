@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "nombrePlan": "Twogether",
+    "tipoPlan": "a suscipit nulla",
+    "costoPorPersona": 58,
+    "descripcion": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "ubicacion": "Panjiang",
+    "guia": true,
+    "duracion": 34,
+    "idioma": "Hindi"
+  }, {
+    "id": 2,
+    "nombrePlan": "Business of Being Born, The",
+    "tipoPlan": "ullamcorper",
+    "costoPorPersona": 33,
+    "descripcion": "Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+    "ubicacion": "Kosonsoy",
+    "guia": true,
+    "duracion": 3,
+    "idioma": "Dzongkha"
+  }, {
+    "id": 3,
+    "nombrePlan": "Year Zero: The Silent Death of Cambodia",
+    "tipoPlan": "dolor morbi vel",
+    "costoPorPersona": 35,
+    "descripcion": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
+    "ubicacion": "Al Madān",
+    "guia": false,
+    "duracion": 61,
+    "idioma": "Khmer"
+  }, {
+    "id": 4,
+    "nombrePlan": "Bad Girls",
+    "tipoPlan": "in hac habitasse",
+    "costoPorPersona": 10,
+    "descripcion": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum.",
+    "ubicacion": "Saint-Étienne-du-Rouvray",
+    "guia": false,
+    "duracion": 55,
+    "idioma": "Icelandic"
+  }, {
+    "id": 5,
+    "nombrePlan": "Luna de Avellaneda",
+    "tipoPlan": "aliquam quis",
+    "costoPorPersona": 52,
+    "descripcion": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "ubicacion": "Bernal",
+    "guia": true,
+    "duracion": 3,
+    "idioma": "Tswana"
+  }]

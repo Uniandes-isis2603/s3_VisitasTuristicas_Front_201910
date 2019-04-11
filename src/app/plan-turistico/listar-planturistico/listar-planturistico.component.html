@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped table-sm">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+               <th>Descripcion</th>
+              <th>Costo por pesona</th>
+              <th>Ubicacion</th>
+              <th>Idioma</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of planTuristico">
+              <td>
+                <a>{{i.id}}</a>
+              </td>
+              <td>
+                <p class="figure-caption">{{i.nombrePlan}}</p>
+              </td>
+              <td>
+                <p class="figure-caption">{{i.descripcion}}</p>
+              </td>
+              <td>
+                <p class="figure-caption">{{i.costoPorPersona}}</p>
+              </td>
+              <td>
+                <p class="figure-caption">{{i.ubicacion}}</p>
+              </td>
+              <td>
+                <p class="figure-caption">{{i.idioma}}</p>
+              </td>
+              <td>
+                <button class="btn btn-outline-primary" style="cursor: pointer;" (click)="onSelected(i.id)" routerLink="planTuristico/id">Visualizar PlanTuristico</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="selectedPlanTuristico">
+          <app-plan-turistico-detail [planTuristicoDetail]="selectedPlanTuristico"> </app-plan-turistico-detail>
+        </div>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="!crearPlanTuristico">
+          <button class="btn-outline-success btn-lg btn-block" (click)="cambiarBoolean()">crear Plan Turistico</button>
+        </div>
+      </div>
+    </div>
+   
+  
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="crearPlanTuristico">
+          <app-crear-planturistico></app-crear-planturistico>
+        </div>
+      </div>
+    </div>
+    
+  </div>

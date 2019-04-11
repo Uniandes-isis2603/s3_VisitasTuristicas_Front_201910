@@ -14,11 +14,7 @@
           Planes turisticos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ver planes turisticos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Crear plan turistico</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Actualizar plan turistico</a>
+          <a class="dropdown-item" [routerLink]="[{ outlets: { primary: ['listar-plan'],sidebar: ['listar-plan'] } }]" routerLinkActive="active">Ver planes turisticos</a>
         </div>
       </li>
       <li class="nav-item dropdown">
