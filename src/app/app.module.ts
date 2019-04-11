@@ -17,6 +17,8 @@ import { InicioModule } from './inicio/inicio.module';
 import { ViajeroModule } from './viajero/viajero.module';
 import { PlanturisticoModule } from './plan-turistico/plan-turistico.module';
 import { Viajero } from './viajero/Viajero';
+import { Sitio} from './sitio/sitio';
+import {SitioModule} from './sitio/sitio.module';
 
 
 
@@ -45,7 +47,11 @@ import { Viajero } from './viajero/Viajero';
         NgbModule,
         InicioModule,
         ViajeroModule,
+<<<<<<< HEAD
         PlanturisticoModule
+=======
+        SitioModule
+>>>>>>> 370d866a268c33444bd5b68bdcc82ad807d3c572
     ],
     bootstrap: [AppComponent],
     providers: [
