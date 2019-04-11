@@ -2,6 +2,9 @@ import {Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angula
 import { ViajeroService } from '../viajero.service';
 import { ViajeroDetail, TarjetaDeCredito } from '../Viajero-detail';
 
+/**
+ * Componente para crear una tarjeta
+ */
 @Component({
   selector: 'app-update-tarjeta',
   templateUrl: './update-tarjeta.component.html',
@@ -9,31 +12,36 @@ import { ViajeroDetail, TarjetaDeCredito } from '../Viajero-detail';
 })
 export class UpdateTarjetaComponent implements OnInit {
 
+  /**
+   * Constructor del componente
+   * @param viajeroService Servicios del componente
+   */
   constructor(
     private viajeroService: ViajeroService,
 ) {}
 
 /**
-* The author id as received from the parent component
+* El viajero al cual voy a modificar la factura
 */
 @Input() viajero: ViajeroDetail;
 
+/**
+ * La informacion de la tarjeta a modificar
+ */
 @Input() tarjeta : TarjetaDeCredito;
 
 /**
-* The output which tells the parent component
-* that the user no longer wants to create an author
+* Avisa que no quiero crear mas una tarjeta al padre
 */
 @Output() cancel = new EventEmitter();
 
 /**
-* The output which tells the parent component
-* that the user updated a new author
+* Avisa al padre que el ya se hizo la modificacion
 */
 @Output() update = new EventEmitter();
 
 /**
-* Updates the information of the author
+* Actualiza la informacion de la tarjeta
 */
 editTarjeta(): void {
     this.update.emit();
@@ -44,8 +52,7 @@ editTarjeta(): void {
 }
 
 /**
-* Emits the signal to tell the parent component that the
-* user no longer wants to create an user
+* Emite la señal para cancelar la edicion
 */
 cancelEdition(): void {
     this.cancel.emit();
@@ -53,7 +60,7 @@ cancelEdition(): void {
 
 
 /**
-* This function will initialize the component
+* Se ejecuta al inicializarcie el componente
 */
 ngOnInit() {
   console.log("pruebas");
@@ -61,7 +68,7 @@ ngOnInit() {
 }
 
 /**
-* This function will be called when the user chooses another author to edit
+* Al elejir otra tarjeta
 */
 ngOnChanges() {
     this.ngOnInit();

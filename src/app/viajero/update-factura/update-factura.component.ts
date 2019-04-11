@@ -2,38 +2,46 @@ import {Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angula
 import { ViajeroService } from '../viajero.service';
 import { ViajeroDetail, Factura } from '../Viajero-detail';
 
+/**
+ * Componente encargado de actualizar las facturas
+ */
 @Component({
   selector: 'app-update-factura',
   templateUrl: './update-factura.component.html',
   styleUrls: ['./update-factura.component.css']
 })
-export class UpdateFacturaComponent implements OnInit {
 
+export class UpdateFacturaComponent implements OnInit {
+  /**
+   * Constructor de la clase
+   * @param viajeroService El que provee los servicios de viajero
+   */
   constructor(
     private viajeroService: ViajeroService,
 ) {}
 
 /**
-* The author id as received from the parent component
+* Información del autor al que quiero modificar la factura
 */
 @Input() viajero: ViajeroDetail;
 
+/**
+ * Información de la factura a actualizar
+ */
 @Input() factura: Factura;
 
 /**
-* The output which tells the parent component
-* that the user no longer wants to create an author
+* Avisa al componente padre que se cancelo el proceso de actualizacion
 */
 @Output() cancel = new EventEmitter();
 
 /**
-* The output which tells the parent component
-* that the user updated a new author
-*/
+ * Avisa al componente padre que se actualizo
+ */
 @Output() update = new EventEmitter();
 
 /**
-* Updates the information of the author
+* Actualiza la informacion de la factura
 */
 editFactura(): void {
     this.update.emit();
@@ -44,8 +52,7 @@ editFactura(): void {
 }
 
 /**
-* Emits the signal to tell the parent component that the
-* user no longer wants to create an user
+* Emite una señal al padre para avisar que no se esta actualizando mas
 */
 cancelEdition(): void {
     this.cancel.emit();
@@ -53,7 +60,7 @@ cancelEdition(): void {
 
 
 /**
-* This function will initialize the component
+* La funcion se corre al inicializarse el componente
 */
 ngOnInit() {
   console.log("pruebas");
@@ -61,7 +68,7 @@ ngOnInit() {
 }
 
 /**
-* This function will be called when the user chooses another author to edit
+* Es una funcion que es llamada al elegir otra factura a modificar
 */
 ngOnChanges() {
     this.ngOnInit();

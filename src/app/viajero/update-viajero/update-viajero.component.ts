@@ -2,6 +2,9 @@ import {Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angula
 import { ViajeroService } from '../viajero.service';
 import { ViajeroDetail } from '../Viajero-detail';
 
+/**
+ * Componente para modificar un viajero
+ */
 @Component({
   selector: 'app-update-viajero',
   templateUrl: './update-viajero.component.html',
@@ -9,35 +12,31 @@ import { ViajeroDetail } from '../Viajero-detail';
 })
 export class UpdateViajeroComponent implements OnInit {
 
-      /**
-    * Constructor for the component
-    * @param dp DatePipe to format the date.
-    * @param authorService The authors' services provider
-    * @param toastrService The toastr to show messages to the user
+    /**
+    * Constructor para el componente
+    * @param viajeroService Proveedor de los servicios del viajero
     */
    constructor(
     private viajeroService: ViajeroService,
 ) {}
 
 /**
-* The author id as received from the parent component
+* La información del viajero que se está actualizando
 */
 @Input() viajero: ViajeroDetail;
 
 /**
-* The output which tells the parent component
-* that the user no longer wants to create an author
+* Dice al componente padre que el componete no quiere ser creado
 */
 @Output() cancel = new EventEmitter();
 
 /**
-* The output which tells the parent component
-* that the user updated a new author
+* Dice al componente padre que el viajero ya fue creado
 */
 @Output() update = new EventEmitter();
 
 /**
-* Updates the information of the author
+* Modifica la informacion del usuaro
 */
 editViajero(): void {
   this.update.emit();
@@ -48,8 +47,7 @@ editViajero(): void {
 }
 
 /**
-* Emits the signal to tell the parent component that the
-* user no longer wants to create an user
+* Emite la señal para cancelar edicion
 */
 cancelEdition(): void {
     this.cancel.emit();
@@ -57,7 +55,7 @@ cancelEdition(): void {
 
 
 /**
-* This function will initialize the component
+* Inicia el componente
 */
 ngOnInit() {
   console.log("pruebas");
@@ -65,7 +63,7 @@ ngOnInit() {
 }
 
 /**
-* This function will be called when the user chooses another author to edit
+* Se llama cuando se elija otro viajero a modificar
 */
 ngOnChanges() {
     this.ngOnInit();
