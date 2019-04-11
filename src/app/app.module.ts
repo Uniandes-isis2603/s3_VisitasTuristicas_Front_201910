@@ -16,6 +16,8 @@ import {AuthModule} from './auth/auth.module';
 import { InicioModule } from './inicio/inicio.module';
 import { ViajeroModule } from './viajero/viajero.module';
 import { Viajero } from './viajero/Viajero';
+import { Sitio} from './sitio/sitio';
+import {SitioModule} from './sitio/sitio.module';
 
 
 
@@ -43,7 +45,8 @@ import { Viajero } from './viajero/Viajero';
         NgxPermissionsModule.forRoot(),
         NgbModule,
         InicioModule,
-        ViajeroModule
+        ViajeroModule,
+        SitioModule
     ],
     bootstrap: [AppComponent],
     providers: [
