@@ -1,0 +1,49 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+			<table class="table table-striped table-sm">
+				<thead class="table-primary">
+					<tr>
+						<th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let i of sitio">
+						<td>
+							<a>{{i.id}}</a>
+						</td>
+            <td>
+							<p class="figure-caption">{{i.nombre}}</p>
+						</td>
+            <td>
+							<p class="figure-caption">{{i.tipo}}</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+ <div class="border row">
+		<div class="col">
+      <div *ngIf="!crearSitio">
+			  <button class="btn-outline-success btn-lg btn-block" >crear Sitio Desde Cero</button>
+      </div>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+			<div *ngIf="crearSitio">
+				<app-crear-sitio></app-crear-sitio>
+			</div>
+		</div>
+	</div>
+  <div class="border row">
+		<div class="col">
+      <div *ngIf="crearSitio">
+			  <button class="btn-outline-danger btn-lg btn-block" >Cancelar creacion del Sitio</button>
+      </div>
+		</div>
+	</div>

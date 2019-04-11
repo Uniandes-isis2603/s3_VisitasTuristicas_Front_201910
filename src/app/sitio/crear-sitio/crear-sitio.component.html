@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-6">
+      <br>
+      <h2 class="text-center">Crear un Sitio Turistico</h2>
+      <br>
+      <form name="sitio" (ngSubmit)="f.form.valid && createSitio()" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label for="sitioName"><b>Nombre de Sitio</b></label>
+              <input type="text" name="sitioName" class="form-control" id="sitioName" [(ngModel)]="sitio.name"
+                  #sitioName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioName.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un nombre valido</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="sitioTipo"><b>Tipo de Sitio Turistico</b></label>
+                  <select name="sitioTipo" class="form-control" id="sitioTipo" [(ngModel)]="sitio.tipo"
+                  #sitioTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioTipo.invalid }" required>
+                  </select>
+          </div>
+      </form>
+  </div>
+</div>
