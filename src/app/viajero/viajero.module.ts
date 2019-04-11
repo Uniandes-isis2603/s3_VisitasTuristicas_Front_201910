@@ -10,6 +10,7 @@ import { CrearViajeroComponent } from './crear-viajero/crear-viajero.component';
 import { CrearFacturaComponent } from './crear-factura/crear-factura.component';
 import { UpdateViajeroComponent } from './update-viajero/update-viajero.component';
 import { UpdateFacturaComponent } from './update-factura/update-factura.component';
+import { UpdateTarjetaComponent } from './update-tarjeta/update-tarjeta.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { UpdateFacturaComponent } from './update-factura/update-factura.componen
     FormsModule,
     AppRoutingModule
   ],
-  declarations: [ListarViajeroComponent, ViajeroDetailComponent, CrearViajeroComponent, CrearFacturaComponent, UpdateViajeroComponent, UpdateFacturaComponent],
+  declarations: [ListarViajeroComponent, ViajeroDetailComponent, CrearViajeroComponent, CrearFacturaComponent, UpdateViajeroComponent, UpdateFacturaComponent, UpdateTarjetaComponent],
   providers: [ViajeroService],
   exports: [ListarViajeroComponent],
 })
