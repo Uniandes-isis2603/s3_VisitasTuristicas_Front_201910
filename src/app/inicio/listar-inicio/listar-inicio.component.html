@@ -30,9 +30,7 @@
           Ciudades
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ver Ciudades</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Crear Ciudades</a>
+          <a class="dropdown-item" [routerLink]="[{ outlets: { primary: ['listar-ciudad'],sidebar: ['listar-ciudad'] } }]" routerLinkActive="active">Ver Ciudades</a>
         </div>
       </li>
       <li class="nav-item dropdown">

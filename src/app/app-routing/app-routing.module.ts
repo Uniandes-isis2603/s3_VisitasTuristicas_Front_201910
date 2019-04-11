@@ -9,6 +9,7 @@ import { ListarInicioComponent } from 'app/inicio/listar-inicio/listar-inicio.co
 import { ListarViajeroComponent } from 'app/viajero/listar-viajero/listar-viajero.component';
 import { ListarPlanturisticoComponent } from 'app/plan-turistico/listar-planturistico/listar-planturistico.component';
 import { ListarSitioComponent } from 'app/sitio/listar-sitio/listar-sitio.component';
+import { CiudadListComponent } from 'app/ciudad/ciudad-list/ciudad-list.component';
 
 const routes: Routes = [
 
@@ -58,6 +59,11 @@ const routes: Routes = [
     {
         path: 'listar-sitio',
         component: ListarSitioComponent,
+        outlet: 'sidebar'
+    },
+    {
+        path: 'listar-ciudad',
+        component: CiudadListComponent,
         outlet: 'sidebar'
     }
 ];

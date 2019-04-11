@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped table-dark">
+          <thead class="thead-dark">
+            <tr>
+              <th>Ciudades a visitar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of ciudades">
+              <td>
+                <a class="figure-caption" (click)="onSelected(i.id)" style="cursor: pointer;">{{i.name}}</a>
+              </td>
+              <td>
+                <button class="btn btn-outline-primary" style="cursor: pointer;" (click)="onSelected(i.id)" routerLink="ciudades/id">Visualizar Sitios Turisticos</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="selectedCiudad">
+          <app-ciudad-detail [ciudadDetail]="selectedCiudad"> </app-ciudad-detail>
+        </div>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="!crearCiudad">
+          <button class="btn-outline-success btn-lg btn-block" (click)="cambiarBoolean()">Crear Ciudad Desde Cero</button>
+        </div>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="col">
+        <div *ngIf="crearCiudad">
+          <app-ciudad-create></app-ciudad-create>
+        </div>
+      </div>
+    </div>
+  </div>

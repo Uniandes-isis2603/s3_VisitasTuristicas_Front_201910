@@ -16,9 +16,8 @@ import {AuthModule} from './auth/auth.module';
 import { InicioModule } from './inicio/inicio.module';
 import { ViajeroModule } from './viajero/viajero.module';
 import { PlanturisticoModule } from './plan-turistico/plan-turistico.module';
-import { Viajero } from './viajero/Viajero';
-import { Sitio} from './sitio/sitio';
 import {SitioModule} from './sitio/sitio.module';
+import {CiudadModule} from './ciudad/ciudad.module';
 
 
 
@@ -48,7 +47,8 @@ import {SitioModule} from './sitio/sitio.module';
         InicioModule,
         ViajeroModule,
         PlanturisticoModule,
-        SitioModule
+        SitioModule,
+        CiudadModule
     ],
     bootstrap: [AppComponent],
     providers: [

@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Crear una ciudad</h2>
+        <br>
+        <form name="ciudadDetail" (ngSubmit)="f.form.valid && createCiudad()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="ciudadName"><b>Nombre de ciudad</b></label>
+                <input type="text" name="ciudadName" class="form-control" id="ciudadName" [(ngModel)]="ciudadDetail.name"
+                    #ciudadName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ciudadName.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Introducir un nombre valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ciudadDecripcion"><b>Descripción de la ciudad</b></label>
+                <input type = "text" name="ciudadDecripcion" class="form-control" id="ciudadDecripcion" [(ngModel)]="ciudadDetail.description"
+                    #ciudadDecripción="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ciudadDecripcion.invalid }"
+                    required>
+                <div class="invalid-feedback">
+                    <div>Falta la descripción</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ciudadImagen"><b>Imagen de la ciudad</b></label>
+                <input type="text" name="ciudadImagen" class="form-control" id="ciudadImagen" [(ngModel)]="ciudadDetail.imagen"
+                    #ciudadImagen="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ciudadImagen.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca una imagen válida</div>
+                </div>
+            </div>
+          
+            <h2 class="text-center">Crear el sitio turístico</h2>
+            <form name="sitioTuristico" (ngSubmit)="f.form.valid && createSitio()" #f="ngForm" novalidate>
+              <div class="form-group">
+                <label for="sitioNombre"><b>Nombre del sitio</b></label>
+                <input type="text" name="sitioNombre" class="form-control" id="sitioNombre" [(ngModel)]="sitio.nombre"
+                    #sitioNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioNombre.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Introducir un nombre válido</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sitioTipo"><b>Tipo del sitio</b></label>
+                <input type="text" name="sitioTipo" class="form-control" id="sitioTipo" [(ngModel)]="sitio.tipo"
+                    #sitioTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioTipo.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Introducir un tipo válido</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sitioImagen"><b>Imagen del sitio</b></label>
+                <input type="number" name="sitioImagen" class="form-control" id="sitioImagen" [(ngModel)]="sitio.imagen"
+                    #sitioImagen="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sitioImagen.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>Introducir una imagen válida</div>
+                </div>
+              </div>
+              <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Crear Sitio Turístico</button>
+                <div class="divider"></div>
+              </div>
+            </form>
+
+            <div class="row form-inline justify-content-center align-self-center">
+              <div *ngIf = "creandoSitio">
+                <button type="submit" class="btn btn-primary">Crear Ciudad</button>
+                <div class="divider"></div>
+              </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
