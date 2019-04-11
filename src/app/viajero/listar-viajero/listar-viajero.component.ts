@@ -67,7 +67,7 @@ getAuthorDetail(): void{
   });
 }
 
-updateAuthor(): void{
+updateViajero(): void{
   this.actualizar = false;
   this.detail = true;
 }

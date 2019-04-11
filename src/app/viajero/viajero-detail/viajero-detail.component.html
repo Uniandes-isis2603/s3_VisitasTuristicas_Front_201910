@@ -37,6 +37,7 @@
     </table>
   </div>
   <div class = "col-6">
+  <div *ngIf = "!crearFactura && !actualizarFactura">
   <p class="h3 p-3 text-center">Facturas:</p>
   <div *ngIf="!crearFactura">
    <table class="table table-striped table-sm">
@@ -60,20 +61,24 @@
             <p class="figure-caption">{{i.costo}}</p>
           </td>
           <td>
-            <button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+            <button class="btn btn-outline-warnig" (click) = "mostrarActualizar(i)"><span class="fa fa-pencil"></span></button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  </div>
+    <div *ngIf = "actualizarFactura">
+      <app-update-factura [viajero] = "viajeroDetail" [factura] = "factura" (cancel)="mostrarActualizar(factura)" (update)="updateFactura()"></app-update-factura>
+    </div> 
     <div *ngIf = "crearFactura">
       <app-crear-factura [viajero] = "viajeroDetail"></app-crear-factura>
     </div>  
     <div *ngIf="!crearFactura">
-      <button class="btn-outline-success" (click)="cambiarBoolean()">Añadir una factura al usuario</button>
+      <button class="btn-outline-success" (click)="showHideCreate()">Añadir una factura al usuario</button>
     </div>
     <div *ngIf="crearFactura">
-      <button class="btn-outline-danger" (click)="cambiarBoolean()">Cancelar creración de factura</button>
+      <button class="btn-outline-danger" (click)="showHideCreate()">Cancelar creración de factura</button>
     </div>
   </div>
 </div>

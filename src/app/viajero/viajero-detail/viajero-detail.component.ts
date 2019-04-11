@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { ViajeroService } from '../viajero.service';
 import { Viajero } from '../Viajero';
-import { ViajeroDetail } from '../Viajero-detail';
+import { ViajeroDetail, Factura } from '../Viajero-detail';
 import { CrearFacturaComponent} from '../crear-factura/crear-factura.component';
 
 @Component({
@@ -22,7 +22,7 @@ export class ViajeroDetailComponent implements OnInit {
   */
   @Input() viajeroDetail: ViajeroDetail;
 
-  @ViewChild(CrearFacturaComponent) factura: CrearFacturaComponent;
+  factura: Factura;
 
 
   /**
@@ -33,6 +33,8 @@ export class ViajeroDetailComponent implements OnInit {
   loader: any;
 
   crearFactura: boolean;
+
+  actualizarFactura: boolean;
   /**
   * The method which retrieves the books of an editorial
   */
@@ -42,9 +44,25 @@ export class ViajeroDetailComponent implements OnInit {
         this.viajeroDetail = o
       });
   }
+  
+  mostrarActualizar(factura){
+    if (!this.actualizarFactura) {
+      this.crearFactura= false;
+      this.actualizarFactura = true;
+      this.factura = factura;
+  }
+  else { 
+      this.actualizarFactura = false;
+  }
+  }
 
-  cambiarBoolean(){
+  showHideCreate(): void {
+    this.actualizarFactura = false;
     this.crearFactura = !this.crearFactura;
+  }
+
+  updateFactura(): void{
+    this.actualizarFactura = false;
   }
 
   ngOnInit() {

@@ -1,21 +1,15 @@
 import {Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angular/core';
 import { ViajeroService } from '../viajero.service';
-import { ViajeroDetail } from '../Viajero-detail';
+import { ViajeroDetail, Factura } from '../Viajero-detail';
 
 @Component({
-  selector: 'app-update-viajero',
-  templateUrl: './update-viajero.component.html',
-  styleUrls: ['./update-viajero.component.css']
+  selector: 'app-update-factura',
+  templateUrl: './update-factura.component.html',
+  styleUrls: ['./update-factura.component.css']
 })
-export class UpdateViajeroComponent implements OnInit {
+export class UpdateFacturaComponent implements OnInit {
 
-      /**
-    * Constructor for the component
-    * @param dp DatePipe to format the date.
-    * @param authorService The authors' services provider
-    * @param toastrService The toastr to show messages to the user
-    */
-   constructor(
+  constructor(
     private viajeroService: ViajeroService,
 ) {}
 
@@ -23,6 +17,8 @@ export class UpdateViajeroComponent implements OnInit {
 * The author id as received from the parent component
 */
 @Input() viajero: ViajeroDetail;
+
+@Input() factura: Factura;
 
 /**
 * The output which tells the parent component
@@ -39,9 +35,9 @@ export class UpdateViajeroComponent implements OnInit {
 /**
 * Updates the information of the author
 */
-editViajero(): void {
-  this.update.emit();
-    this.viajeroService.updateViajero(this.viajero)
+editFactura(): void {
+    this.update.emit();
+    this.viajeroService.updateFactura(this.viajero.id, this.factura)
         .subscribe(() => {
             
         });
