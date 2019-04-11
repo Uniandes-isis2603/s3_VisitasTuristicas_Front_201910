@@ -8,6 +8,7 @@
   </div>
   <div class = "row">
     <div class = "col-6">
+      <div *ngIf= "!actualizarTarjeta">
       <p class="h1 p-3 text-center"> Tarjeta de crédito:</p>
     <table class="table table-striped table-sm">
       <thead class="table-success">
@@ -30,11 +31,15 @@
             <p class="figure-caption">{{viajeroDetail.tarjetaDeCredito.codigoSeguridad}}</p>
           </td>
           <td>
-            <button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+            <button class="btn btn-outline-warnig" (click) = "mostrarActualizarTarjeta(viajeroDetail.tarjetaDeCredito)"><span class="fa fa-pencil"></span></button>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+    <div *ngIf = "actualizarTarjeta">
+        <app-update-tarjeta [viajero] = "viajeroDetail" [tarjeta] = "tarjeta" (cancel)="mostrarActualizarTarjeta(tarjeta)" (update)="updateTarjeta()"></app-update-tarjeta>
+    </div> 
   </div>
   <div class = "col-6">
   <div *ngIf = "!crearFactura && !actualizarFactura">

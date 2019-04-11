@@ -42,4 +42,8 @@ export class ViajeroService {
   updateFactura(viajero_id,factura): Observable<Factura> {
     return this.http.put<Factura>(API_URL + "viajeros/" + viajero_id+"/facturas/"+factura.id, factura);
   }
+
+  updateTarjeta(viajero_id,tarjeta): Observable<TarjetaDeCredito> {
+    return this.http.put<TarjetaDeCredito>(API_URL + "viajeros/" + viajero_id+"/tarjetas/"+tarjeta.id, tarjeta);
+  }
 }
