@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViajeroService } from '../viajero.service';
-import { Viajero } from '../viajero';
-import { ViajeroDetail } from '../viajero-detail';
+import { Viajero } from '../Viajero';
+import { ViajeroDetail } from '../Viajero-detail';
 import { ViajeroDetailComponent } from '../viajero-detail/viajero-detail.component';
 import { CrearViajeroComponent } from '../crear-viajero/crear-viajero.component';
 import { Router } from '@angular/router';
@@ -16,6 +16,10 @@ export class ListarViajeroComponent implements OnInit {
 
   crearCliente: boolean;
 
+  actualizar: boolean;
+
+  detail: boolean;
+
   viajero_id: number;
   selectedViajero: ViajeroDetail;
 
@@ -25,27 +29,48 @@ export class ListarViajeroComponent implements OnInit {
     this.viajeroService.getViajeros().subscribe(cliente => this.viajero = cliente);
   }
 
-  onSelected(editorial_id: number): void {
-    if(this.crearCliente)
-    {
-      this.cambiarBoolean();
-    }
-    console.log(this.crearCliente);
-    console.log(this.viajero);
-    this.viajero_id = editorial_id;
-    console.log("lol");
+  onSelected(viajero_id: number): void {
+    this.crearCliente= false;
+    this.actualizar = false;
+    this.detail = true;
+    this.viajero_id = viajero_id;
     this.selectedViajero = new ViajeroDetail();
-    this.viajeroService. getViajeroDetail(editorial_id).subscribe(o => {this.selectedViajero = o;
-    console.log("lolazo");
-    console.log(o);
-    console.log("lolazo");
-    console.log(this.selectedViajero)}
-    );
+    this.getAuthorDetail();
   }
 
-  cambiarBoolean(): void{
+  showHideCreate(): void {
+    this.detail = false;
+    this.actualizar = false;
     this.crearCliente = !this.crearCliente;
   }
+
+/**
+* Shows or hides the create component
+*/
+showHideEdit(viajero_id: number): void {
+    if (!this.actualizar || (this.actualizar && viajero_id != this.selectedViajero.id)) {
+        this.detail = false;
+        this.crearCliente= false;
+        this.actualizar = true;
+        this.viajero_id = viajero_id;
+        this.selectedViajero = new ViajeroDetail();
+        this.getAuthorDetail();
+    }
+    else { 
+        this.actualizar = false;
+        this.detail = true;
+    }
+}
+
+getAuthorDetail(): void{
+  this.viajeroService. getViajeroDetail(this.viajero_id).subscribe(o => {this.selectedViajero = o;
+  });
+}
+
+updateAuthor(): void{
+  this.actualizar = false;
+  this.detail = true;
+}
 
   ngOnInit() {
     this.getViajeros();

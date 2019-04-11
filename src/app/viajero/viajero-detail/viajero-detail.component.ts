@@ -2,8 +2,8 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { ViajeroService } from '../viajero.service';
-import { Viajero } from '../viajero';
-import { ViajeroDetail } from '../viajero-detail';
+import { Viajero } from '../Viajero';
+import { ViajeroDetail } from '../Viajero-detail';
 import { CrearFacturaComponent} from '../crear-factura/crear-factura.component';
 
 @Component({

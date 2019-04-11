@@ -3,8 +3,8 @@ import {Router} from '@angular/router';
 import {FormsModule, NgForm, ReactiveFormsModule} from '@angular/forms';
 
 import {ViajeroService} from '../viajero.service';
-import {ViajeroDetail} from '../viajero-detail';
-import {TarjetaDeCredito} from '../viajero-detail'
+import {ViajeroDetail} from '../Viajero-detail';
+import {TarjetaDeCredito} from '../Viajero-detail'
 
 @Component({
   selector: 'app-crear-viajero',

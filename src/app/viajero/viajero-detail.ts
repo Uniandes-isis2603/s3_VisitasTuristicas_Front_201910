@@ -1,4 +1,4 @@
-import {Viajero} from './viajero'
+import {Viajero} from './Viajero'
 export class ViajeroDetail extends Viajero{
   facturas: Array<Factura> = [];
   tarjetaDeCredito: TarjetaDeCredito;

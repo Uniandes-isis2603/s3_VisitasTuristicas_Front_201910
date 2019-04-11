@@ -30,7 +30,7 @@
 							<button class="btn btn-outline-primary" style="cursor: pointer;" (click)="onSelected(i.id)" routerLink="viajeros/id">Visualizar Usuario</button>
 						</td>
             <td>
-							<button class="btn btn-outline-warnig"><span class="fa fa-pencil"></span></button>
+							<button class="btn btn-outline-warnig" (click) = "showHideEdit(i.id)"><span class="fa fa-pencil"></span></button>
 						</td>
 					</tr>
 				</tbody>
@@ -39,15 +39,22 @@
 	</div>
   <div class="border row">
 		<div class="col">
-			<div *ngIf="selectedViajero && !crearCliente">
+			<div *ngIf="detail">
 				<app-viajero-detail [viajeroDetail]="selectedViajero"> </app-viajero-detail>
+			</div>
+		</div>
+	</div>
+	<div class="border row">
+		<div class="col">
+			<div *ngIf="actualizar">
+				<app-update-viajero [viajero]="selectedViajero" (cancel)="showHideEdit(selectedViajero.id)" (update)="updateViajero()"> </app-update-viajero>
 			</div>
 		</div>
 	</div>
   <div class="border row">
 		<div class="col">
       <div *ngIf="!crearCliente">
-			  <button class="btn-outline-success btn-lg btn-block" (click)="cambiarBoolean()">crear Usuario Desde Cero</button>
+			  <button class="btn-outline-success btn-lg btn-block" (click)="showHideCreate()">crear Usuario Desde Cero</button>
       </div>
 		</div>
 	</div>
@@ -61,7 +68,7 @@
   <div class="border row">
 		<div class="col">
       <div *ngIf="crearCliente">
-			  <button class="btn-outline-danger btn-lg btn-block" (click)="cambiarBoolean()">Cancelar creacion del usuario</button>
+			  <button class="btn-outline-danger btn-lg btn-block" (click)="showHideCreate()">Cancelar creacion del usuario</button>
       </div>
 		</div>
 	</div>

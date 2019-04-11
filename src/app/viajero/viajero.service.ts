@@ -35,4 +35,8 @@ export class ViajeroService {
   createFactura(viajeroId, factura): Observable<Factura> {
         return this.http.post<Factura>(API_URL + "viajeros" + '/' + viajeroId + "/facturas", factura);
   }
+
+  updateViajero(viajero): Observable<ViajeroDetail> {
+    return this.http.put<ViajeroDetail>(API_URL + "viajeros/" + viajero.id, viajero);
+}
 }

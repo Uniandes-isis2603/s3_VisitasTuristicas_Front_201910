@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import {Factura} from '../viajero-detail'
+import {Factura} from '../Viajero-detail'
 import { ViajeroService } from '../viajero.service';
-import { ViajeroDetail } from '../viajero-detail';
+import { ViajeroDetail } from '../Viajero-detail';
 @Component({
     selector: 'app-crear-factura',
     templateUrl: './crear-factura.component.html',
