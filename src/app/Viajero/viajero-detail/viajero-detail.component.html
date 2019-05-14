@@ -1,0 +1,14 @@
+<div class="col-md-12">
+    <div class="container-fluid">   
+        <p class="h4 p-3">Viajero: {{ViajeroDetail.nombreUsuario}}</p>
+        <br>
+        <div class="row border margin">
+            <p class="h4 p-3">Preferencias: </p>
+            <app-book-list [preferencias]="ViajeroDetail.preferencias"></app-book-list>
+        </div>
+        <div class="row border margin">
+            <p class="h4 p-3">Facturas: </p>
+            <app-book-list [facturas]="ViajeroDetail.facturas"></app-book-list>
+        </div>
+    </div>
+</div>

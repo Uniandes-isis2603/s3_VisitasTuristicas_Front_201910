@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <br>
+            <div class="row justify-content-center align-self-center" *ngxPermissionsOnly="['ADMIN']">
+                <button [ngClass]="{ 'btn-primary': !showCreate, 'btn-danger': showCreate }" type="button" class="btn"
+                    (click)="showHideCreate()">Create an viajero</button>
+            </div>
+            <br>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nombreUsuario</th>
+                        <th>codigoUnico</th>
+                        <th>idioma</th> 
+                        <th>tipoDeUsuario</th> 
+                        <th>cantidadPlanes</th>
+                        <th>informacionPersonal</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let viajero of viajeros">
+                        <td style="cursor: pointer;">
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.idUsuario}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.nombreUsuario}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.codigoUnico}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.idioma}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.tipoDeUsuario}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.cantidadPlanes}}</dd>
+                <dd class="figure-caption" routerLink="/viajeros/{{viajero.id}}">{{viajero.informacionPersonal}}</dd>
+                </td>
+                <td *ngxPermissionsOnly="['ADMIN']">
+                    <button class="btn btn-primary" (click)="showHideEdit(viajero.id)"><span class="fa fa-pencil"></span></button>
+                </td>
+                <td *ngxPermissionsOnly="['ADMIN']">
+                    <button class="btn btn-danger" (click)="deleteViajero(viajero.id)"><span class="fa fa-trash"></span></button>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8">
+            <div *ngIf="showCreate">
+                <app-viajero-create (cancel)="showHideCreate()" (create)="ngOnInit()" *ngIf="showCreate"></app-viajero-create>
+            </div>
+            <div *ngIf="showEdit">
+                <app-viajero-edit [viajero_id]="viajero_edit_id" (cancel)="showHideEdit(viajero_edit_id)" (update)="updateViajero()"></app-viajero-edit>
+            </div>
+        </div>
+
+    </div>
+</div>

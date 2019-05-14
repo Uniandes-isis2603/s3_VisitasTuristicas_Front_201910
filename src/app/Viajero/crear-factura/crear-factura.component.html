@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Crear una factura</h2>
+      <br>
+      <form name="factura" (ngSubmit)="f.form.valid && createFactura()" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label for="facturaDescripcion"><b>Descripcion de la factura</b></label>
+                <textarea name="facturaDescripcion" maxlength=255 class="form-control" id="facturaDescripcion" [(ngModel)]="factura.descripcion"
+                #facturaDescripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                required></textarea>
+              <div class="invalid-feedback">
+                  <div>Por favor introduzca información válida</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="facturaCosto"><b>Costo de la factura</b></label>
+              <input type="number" name="facturaCosto" class="form-control" id="facturaCosto" [(ngModel)]="factura.costo"
+                  #facturaCosto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && facturaCosto.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un banco válido</div>
+              </div>
+            </div> 
+            <div class="row form-inline justify-content-center align-self-center">
+              <button type="submit" class="btn btn-success">Crear factura</button>
+              <div class="divider"></div>
+            </div>
+      </form>
+</div>
