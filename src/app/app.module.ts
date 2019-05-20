@@ -37,7 +37,7 @@ import {CiudadModule} from './ciudad/ciudad.module';
         AuthModule,
         FormsModule,
         ToastrModule.forRoot({
-            timeOut: 10000,
+            timeOut: 1000,
             positionClass: 'toast-bottom-right',
             preventDuplicates: true,
         }),
