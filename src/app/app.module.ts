@@ -19,7 +19,9 @@ import { PlanturisticoModule } from './plan-turistico/plan-turistico.module';
 import {SitioModule} from './sitio/sitio.module';
 import {CiudadModule} from './ciudad/ciudad.module';
 
-
+// import { Guard } from './_services/guard.service';
+// import { ViajeroComponent } from './viajero/viajero.component';
+// import { AdministradorComponent } from './administrador/administrador.component';
 
 
 
@@ -27,6 +29,8 @@ import {CiudadModule} from './ciudad/ciudad.module';
 @NgModule({
     declarations: [
         AppComponent
+//     , ViajeroComponent,
+//     AdministradorComponent
     ],
     imports: [
         BrowserModule,
@@ -40,6 +44,7 @@ import {CiudadModule} from './ciudad/ciudad.module';
             timeOut: 1000,
             positionClass: 'toast-bottom-right',
             preventDuplicates: true,
+
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
@@ -50,6 +55,22 @@ import {CiudadModule} from './ciudad/ciudad.module';
         SitioModule,
         CiudadModule
     ],
+                //     RouterModule.forRoot([
+//         {
+//           path: 'viajero',
+//           component: ViajeroComponent,
+//           canActivate:[Guard]
+//         },
+//         {
+//         path: 'administrador',
+//         component: AdministradorComponent,
+//         canActivate:[Guard]
+//        }
+//     ])
+//   ],
+//   providers: [Guard],
+//   bootstrap: [AppComponent]
+
     bootstrap: [AppComponent],
     providers: [
         {
@@ -60,3 +81,34 @@ import {CiudadModule} from './ciudad/ciudad.module';
     ]
 })
 export class AppModule {}
+
+// import { Guard } from './_services/guard.service';
+// import { ViajeroComponent } from './viajero/viajero.component';
+// import { AdministradorComponent } from './administrador/administrador.component';
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     ViajeroComponent,
+//     AdministradorComponent
+//   ],
+//   imports: [
+//     BrowserModule,
+//     HttpModule,
+
+//     RouterModule.forRoot([
+//         {
+//           path: 'viajero',
+//           component: ViajeroComponent,
+//           canActivate:[Guard]
+//         },
+//         {
+//         path: 'administrador',
+//         component: AdministradorComponent,
+//         canActivate:[Guard]
+//        }
+//     ])
+//   ],
+//   providers: [Guard],
+//   bootstrap: [AppComponent]
+// })
+// export class AppModule { }

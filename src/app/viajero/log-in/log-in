@@ -1,0 +1,19 @@
+    import { Injectable }     from '@angular/core';
+    import { CanActivate }    from '@angular/router';
+    import { Router } from '@angular/router';
+
+    @Injectable()
+    export class Guard implements CanActivate {
+      canActivate() {
+
+    if (this.user && this.user.profile.role == 'Viajero') {
+             this.router.navigate(['viajero']);
+        } if else (this.user && this.user.profile.role == 'Administrador') {
+            this.router.navigate(['administrador']);
+        } ...
+
+        return true;
+      }
+
+ constructor(private router: Router) { }
+    }
