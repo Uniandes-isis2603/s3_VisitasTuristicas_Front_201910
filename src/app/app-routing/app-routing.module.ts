@@ -40,13 +40,13 @@ const routes: Routes = [
         ]
     },
     {
-        path: '**',
-        component: ListarInicioComponent
-    },
-    {
-        path: 'home',
+        path: '',
         component: PaginaInicioComponent,
         outlet: 'sidebar'
+    },
+    {
+        path: '**',
+        component: ListarInicioComponent
     },
     {
         path: 'listar-cliente',
@@ -75,8 +75,7 @@ const routes: Routes = [
         CommonModule,
         RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
     ],
-    exports: [RouterModule],
-    declarations: []
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 
