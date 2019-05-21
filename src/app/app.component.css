@@ -191,9 +191,6 @@ a:hover
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -224,10 +221,6 @@ a:hover
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
