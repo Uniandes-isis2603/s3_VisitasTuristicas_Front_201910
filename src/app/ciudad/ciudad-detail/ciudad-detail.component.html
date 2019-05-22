@@ -1,81 +1,24 @@
-<div class="container-fluid" >   
-    <p class="h3 p-3">Ciudad: {{ciudadDetail.name}}</p>
-    <p class="p-3">{{ciudadDetail.description}}</p>
-    <ul class="slides">
-        <input type="radio" name="radio-btn" id="img-1" checked />
-          <li class="slide-container">
-          <div class="slide">
-            <img src="https://wallpapercave.com/wp/rSTBrbM.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-6" class="prev">&#x2039;</label>
-            <label for="img-2" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <input type="radio" name="radio-btn" id="img-2" />
-          <li class="slide-container">
-              <div class="slide">
-                <img src="https://3.bp.blogspot.com/-BdRQwoIcJqE/XGF7WvviSMI/AAAAAAAAF9U/jcKr3Re8iDEZkd5_ylhKTXtljtlOg2FkQCHMYCw/s1600/tokyo-wallpapers-hd-wallpaper-of-tokyo-available-here.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-1" class="prev">&#x2039;</label>
-            <label for="img-3" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <input type="radio" name="radio-btn" id="img-3" />
-          <li class="slide-container">
-              <div class="slide">
-                <img src="https://images6.alphacoders.com/413/thumb-1920-413484.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-2" class="prev">&#x2039;</label>
-            <label for="img-4" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <input type="radio" name="radio-btn" id="img-4" />
-          <li class="slide-container">
-              <div class="slide">
-                <img src="https://i.pinimg.com/originals/af/da/cd/afdacdada8dff82842dfb84cc2a06bbd.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-3" class="prev">&#x2039;</label>
-            <label for="img-5" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <input type="radio" name="radio-btn" id="img-5" />
-          <li class="slide-container">
-              <div class="slide">
-                <img src="https://allhdwallpapers.com/wp-content/uploads/2015/06/Tokyo-10.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-4" class="prev">&#x2039;</label>
-            <label for="img-6" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <input type="radio" name="radio-btn" id="img-6" />
-          <li class="slide-container">
-              <div class="slide">
-                <img src="https://i.ytimg.com/vi/CF_C13iPvOg/maxresdefault.jpg"/>
-              </div>
-          <div class="nav">
-            <label for="img-5" class="prev">&#x2039;</label>
-            <label for="img-1" class="next">&#x203a;</label>
-          </div>
-          </li>
-      
-          <li class="nav-dots">
-            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-            <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-            <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-            <label for="img-6" class="nav-dot" id="img-dot-6"></label>
-          </li>
-      </ul>
-      
-</div>
+<table class="table table-striped table-sm">
+        <thead class="table-primary">
+        <tr>
+        <th><img src = "../../../assets/Edificio.png" style="width: 30px; "></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a>Nombre: {{ciudadDetail.name}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a>Descripcion: {{ciudadDetail.description}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src = {{ciudadDetail.imagen}} class="img-fluid"alt="Responsive image"> 
+                </td>
+            </tr>
+        </tbody>
+</table>  

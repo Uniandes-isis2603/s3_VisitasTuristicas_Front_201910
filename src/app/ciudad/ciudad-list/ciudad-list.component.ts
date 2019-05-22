@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Ciudad } from '../ciudad';
 import { CiudadDetailComponent } from '../ciudad-detail/ciudad-detail.component';
+import { ListarSitioComponent } from '../listar-sitio/listar-sitio.component';
 import { CiudadDetail } from '../ciudad-detail';
 import { CiudadService } from '../ciudad.service';
 
@@ -10,6 +11,7 @@ import { CiudadService } from '../ciudad.service';
  */
 @Component({
   selector: 'list-ciudad',
+  styleUrls: ['./ciudad-list.component.css'],
   templateUrl: './ciudad-list.component.html',
 })
 export class CiudadListComponent implements OnInit {

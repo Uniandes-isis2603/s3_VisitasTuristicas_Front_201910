@@ -2,5 +2,10 @@
     "id": 4,
     "name": "Osaka",
    "description": "Osaka (大阪市 Ōsaka-shi?, lit. Colina grande) (pronunciación japonesa: Acerca de este sonido [ oːsaka ] (?·i)) es la tercera ciudad más grande de Japón, después de Tokio y Yokohama.n 1​3​ Se encuentra ubicada en la principal isla del archipiélago, Honshū (本州, Honshū), en la desembocadura del río Yodo en la bahía de Osaka. La ciudad es uno de los puertos y centros industriales más importantes de Japón, así como la capital de la prefectura de Osaka (大阪府, Ōsaka-fu). Forma parte de la región de Kansai y es el núcleo del área metropolitana Osaka-Kōbe-Kioto (Keihanshin), que tiene una población de 18 644 000 habitantes.",
-   "imagen": "https://images.alphacoders.com/658/thumb-1920-658784.jpg"
-   }
+   "imagen": "https://images.alphacoders.com/658/thumb-1920-658784.jpg",
+   "sitios": [{
+        "id":2,
+        "tipo":"sit amet sem fusce consequat nulla nisl nunc nisl",
+        "nombre":"sagittis nam congue risus semper porta volutpat quam pede lobortis"
+   }]
+}

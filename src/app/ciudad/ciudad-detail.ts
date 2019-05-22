@@ -2,12 +2,10 @@ import {Ciudad} from "./ciudad";
 
 export class CiudadDetail extends Ciudad{
   sitios: Array<SitioTuristico> = [];
-
-  description: string;
-  
-  imagen: ImageData;
 }
 class SitioTuristico {
+  id: number;
+
   tipo: String;
 
   nombre: String

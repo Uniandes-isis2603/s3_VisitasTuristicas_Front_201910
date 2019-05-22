@@ -1,15 +1,19 @@
 [{
     "id": 1,
-    "name": "Tokio"
+    "name": "Tokio",
+    "imagen": "https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/09/akihabara-tokyo-japan-eyeem-26898942-103811280.jpg"
   }, {
     "id": 2,
-    "name": "Nueva York"
+    "name": "Nueva York",
+    "imagen" :"https://sergimateo.com/wp-content/2012/12/Nueva-York-3.jpg"
   },
   {
     "id": 3,
-    "name": "Los Ángeles"
+    "name": "Los Ángeles",
+    "imagen" :"https://i.pinimg.com/originals/66/6e/9f/666e9ff0e3388268a0c7c27afedf79a4.jpg"
   },
   {
     "id": 4,
-    "name": "Osaka"
+    "name": "Osaka",
+    "imagen": "https://images.alphacoders.com/658/thumb-1920-658784.jpg"
   }]

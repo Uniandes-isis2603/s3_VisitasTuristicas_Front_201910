@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CiudadDetailComponent } from './ciudad-detail/ciudad-detail.component';
 import { CiudadCreateComponent } from './ciudad-create/ciudad-create.component';
 import { CiudadEditComponent } from './ciudad-edit/ciudad-edit.component';
+import { ListarSitioComponent } from './listar-sitio/listar-sitio.component';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { CiudadEditComponent } from './ciudad-edit/ciudad-edit.component';
         FormsModule,
         AppRoutingModule
     ],
-    declarations: [CiudadListComponent, CiudadDetailComponent, CiudadCreateComponent, CiudadEditComponent],
+    declarations: [CiudadListComponent, CiudadDetailComponent, CiudadCreateComponent, CiudadEditComponent, ListarSitioComponent],
     providers: [CiudadService],
     exports:[CiudadListComponent]
 })
