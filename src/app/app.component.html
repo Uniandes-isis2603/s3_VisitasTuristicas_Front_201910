@@ -34,16 +34,16 @@
                 <span></span>
                 <ul id="menu" class="list-unstyled components">
                     <li>
-                        <a href="#">Home</a>
+                        <a routerLink="">Home</a>
                     </li>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Comprar un viaje</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a [routerLink]="[{ outlets: { primary: ['listar-cliente'],sidebar: ['listar-cliente'] } }]">Reserva tu viaje</a>
+                                <a routerLink="/listar-cliente">Reserva tu viaje</a>
                             </li>
                             <li>
-                                <a [routerLink]="[{ outlets: { primary: ['listar-ciudad'],sidebar: ['listar-ciudad'] } }]">Mira las ciudades perfectas para tu viaje</a>
+                                <a routerLink="/listar-ciudad">Mira las ciudades perfectas para tu viaje</a>
                             </li>
                         </ul> 
                     </li>
@@ -56,19 +56,14 @@
             </div>
         </nav>
         </div>
-        <div class = "col-3" id = "division-logo"></div>
-        <div class = "col" id = "division-logo">
-            <img src="../assets/Logo.png" class="d-block" alt="...">
-        </div>
     </div>
     <div class = "row" id = "division-logo">
-        <div class="mx-auto" style="width: 400px;">
-            <p>Tu viaje ideal a tan solo un click de distancia</p>
+        <div class="mx-auto">
+            <img src="../assets/Logo.png" class="d-block" alt="...">
         </div>
     </div>
     <div>
         <router-outlet></router-outlet>
-        <router-outlet name = "sidebar"></router-outlet>
     </div>
     <footer>
         <hr />

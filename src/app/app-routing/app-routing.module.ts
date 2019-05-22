@@ -16,6 +16,7 @@ const routes: Routes = [
 
      {
         path: 'auth',
+
         children: [
             {
                 path: 'login',
@@ -41,32 +42,23 @@ const routes: Routes = [
     },
     {
         path: '',
-        component: PaginaInicioComponent,
-        outlet: 'sidebar'
-    },
-    {
-        path: '**',
-        component: ListarInicioComponent
+        component: ListarPlanturisticoComponent,
     },
     {
         path: 'listar-cliente',
         component: ListarViajeroComponent,
-        outlet: 'sidebar'
     },
     {
         path: 'listar-plan',
         component: ListarPlanturisticoComponent,
-        outlet: 'sidebar'
     },
     {
         path: 'listar-sitio',
         component: ListarSitioComponent,
-        outlet: 'sidebar'
     },
     {
         path: 'listar-ciudad',
         component: CiudadListComponent,
-        outlet: 'sidebar'
     }
 ];
 

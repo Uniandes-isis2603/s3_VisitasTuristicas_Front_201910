@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-#cont-principal{
-  background: #A1D9FE;
+#division-logo{
 }
 body{font-family: 'Poppins', sans-serif;
      background: #A1D9FE;}
@@ -46,7 +45,7 @@ a:focus{
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #FFCD5A;
     color: #fff;
     transition: all 0.3s;
 }
@@ -56,11 +55,11 @@ a:focus{
 
 #sidebar .sidebar-header{
 	padding: 20px;
-	background: #6d7fcc;
+	background: #FFCD5A;
 }
 #sidebar ul.components{
 	padding: 20px 0px;
-	border-bottom: 1px solid #47748b;
+	border-bottom: 1px solid #FFCD5A;
 }
 
 #sidebar ul p{
@@ -82,7 +81,7 @@ a:focus{
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #FFCD5A;
 }
 a[data-toggle="collapse"] {
     position: relative;
@@ -98,7 +97,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #FFCD5A;
 }
 
 ul.CTAs {
@@ -114,7 +113,7 @@ ul.CTAs a {
 }
 a.article,
 a.article:hover {
-    background: #6d7fcc !important;
+    background: #FFCD5A !important;
     color: #fff !important;
 }
 
@@ -256,8 +255,9 @@ a:hover
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
+  padding-bottom: 125px;
   
-  background: #6d7fcc;
+  background: #FFCD5A;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
