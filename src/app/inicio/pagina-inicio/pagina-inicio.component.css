@@ -2,3 +2,9 @@
 {
     width: 100%;
 }
+.carousel-item{
+    width: 50vw !important;
+}
+.imagen{
+    width: 50vw !important;
+}

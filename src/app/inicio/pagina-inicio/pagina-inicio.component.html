@@ -1,16 +1,18 @@
-<div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../../../assets/Logo.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+<div class = "row">
+  <div class = "col3" style="display: flex; justify-content: space-between">
+    
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="max-width: 50vw;">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../../assets/Logo.png" class="imagen d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
           </div>
-        </div>
         <div class="carousel-item">
           <img src="../../../assets/Turismo.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
@@ -23,4 +25,52 @@
         </div>
       </div>
     </div>
+ 
+  <div>
+      <main>
+            
+          <div class="container">
+              <div class="parag">
+                  <p>Tu lugar ideal a la distancia de un clic
+                    </p>
+              </div>
+              <div class="form">
+                  <form action="" id="survey-form">
+                      <!-- placeholder story 11-->
+                      <fieldset id="Principal-fieldset">
+                          <legend>Ingresa aquí la información de tu viaje</legend>
+                          <div id="field-with-inputs">
+                              <div id="name">
+                                  <label for="name-input" id="name-label">Ciudad</label>
+                                  <input type="text" name="" id="name-input" placeholder="Ingresa tu ciudad destino" class="inputs">
+                              </div>
+                              <div id="email">
+                                  <label for="email-input" id="email-label">Sitio de interés</label>
+                                  <input type="email" name="" id="email-input" placeholder="Ingresa el sitio que deseas conocer" class="inputs">
+                                  <!-- story 6 xx-->
+                              </div>
+                              <div id="number" id="number-label">
+                                  <label for="number-input"> ¿Cuántos días deseas viajar? </label>
+                                  <p>
+                                  <input type="number" name="" id="number-input" placeholder="#Días" min="0" max="50" class="inputs">
+                                  </p>
+                                          
+                                  <!-- story 8 & 9 -->
+                              </div>
+                              <div id = "datepicker" class = "input-group date" data-date-formate = "yyyy-mm-dd">
+                                  <input type = "date">
+                                  <span class = "input-group-addon"><i class = "gliphicon gliphicon-calendar"></i></span>
+                                </div>
+                              
+                          </div>
+                           <input type="submit" id="submit" value="SUBMIT">
+                         
+                          
+                      </fieldset>
+                  </form>
+              </div>
+          </div>
+      </main>
   </div>
+</div>
+</div>
