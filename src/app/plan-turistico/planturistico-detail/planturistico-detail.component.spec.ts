@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlanturisticoDetailComponent } from './planturistico-detail.component';
+import { PlanTuristicoDetailComponent } from './planturistico-detail.component';
 
 describe('PlanturisticoDetailComponent', () => {
-  let component: PlanturisticoDetailComponent;
-  let fixture: ComponentFixture<PlanturisticoDetailComponent>;
+  let component: PlanTuristicoDetailComponent;
+  let fixture: ComponentFixture<PlanTuristicoDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlanturisticoDetailComponent ]
+      declarations: [ PlanTuristicoDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlanturisticoDetailComponent);
+    fixture = TestBed.createComponent(PlanTuristicoDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

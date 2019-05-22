@@ -1,37 +1,60 @@
-<div class="col-md-12">
-    <div class="container-fluid">   
-        <h1 class="h1 p-3 text-wrap font-weight-bold text-danger text-center">Nombre: {{planTuristicoDetail.nombrePlan}}</h1>
-        <p class="h1 p-3 text-center">Información del Plan Turistico:</p>
-        <p class="p-3 text-justify"> {{planTuristicoDetail.descripcion}}</p>
-        <p class="h1 p-3 text-center">Ubicacion:</p>
-        <p class="p-3 text-justify"> {{planTuristicoDetail.ubicacion}}</p>
-       
-    </div>
-      <p class="h3 p-3 text-center">Blogs de viajero:</p>
-     <table class="table table-striped table-sm">
-        <thead class="table-warning">
-          <tr>
-            <th>id</th>
-            <th>comentarios</th>
-            <th>sugerencias</th>
-            <th>likes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let i of planTuristicoDetail.blogsDeViajero">
-            <td style="cursor: pointer;">
-              <a>{{i.id}}</a>
-            </td>
-            <td style="cursor: pointer;">
-              <p class="figure-caption text-justify">{{i.comentarios}}</p>
-            </td>
-            <td style="cursor: pointer;">
-              <p class="figure-caption">{{i.sugerencias}}</p>
-            </td>
-            <td style="cursor: pointer;">
-              <p class="figure-caption">{{i.likes}}</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<div class = "row">
+    <table class="table table-striped table-sm">
+      <thead class="table-primary">
+        <tr>
+          <th><img src = "../../../assets/viaje.png" style="width: 30px; "></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a>Nombre: {{planTuristicoDetail.nombrePlan}}</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a>Descripcion: {{planTuristicoDetail.descripcion}}</a>
+          </td>
+        </tr>
+        <tr>
+        <td>
+          <a>Costo por persona: {{planTuristicoDetail.costoPorPersona}}</a> 
+        </td>
+        </tr>
+      </tbody>
+    </table>  
+</div>
+<div class = "row">
+  <div class = "col-6">
+    <p class="h3 p-3 text-center">Blogs de viajero:</p>
+    <table class="table table-striped table-sm">
+      <thead class="table-warning">
+        <tr>
+          <th>id</th>
+          <th>comentarios</th>
+          <th>sugerencias</th>
+          <th>likes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of planTuristicoDetail.blogsDeViajero">
+          <td style="cursor: pointer;">
+            <a>{{i.id}}</a>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption text-justify">{{i.comentarios}}</p>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption">{{i.sugerencias}}</p>
+          </td>
+          <td style="cursor: pointer;">
+            <p class="figure-caption">{{i.likes}}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class = "col-6">
+      <app-listar-valoracion [valoracion]="planTuristicoDetail.valoraciones"></app-listar-valoracion>
+  </div>
 </div>

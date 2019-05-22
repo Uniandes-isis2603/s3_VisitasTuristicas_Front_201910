@@ -1,0 +1,25 @@
+<table class="table table-striped table-sm">
+    <thead class="table-warning">
+      <tr>
+        <th>valoracion</th>
+        <th>comentarios</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of valoracion">
+        <td>
+          <div *ngFor = "let a of toStar(i.valoracion)">
+            <div *ngIf ="a">
+                <span class="fa fa-star checked"></span>
+            </div>
+            <div *ngIf ="!a">
+                <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </td>
+        <td style="cursor: pointer;">
+          <p class="figure-caption text-justify">{{i.comentario}}</p>
+        </td>
+      </tr>
+    </tbody>
+</table>

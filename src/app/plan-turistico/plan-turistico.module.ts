@@ -6,6 +6,8 @@ import { PlanTuristicoDetailComponent } from './planturistico-detail/planturisti
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CrearPlanTuristicoComponent } from './crear-planturistico/crear-planturistico.component';
+import { ListarValoracionComponent } from './listar-valoracion/listar-valoracion.component';
+import { ValoracionComponent } from './valoracion/valoracion.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,7 @@ import { CrearPlanTuristicoComponent } from './crear-planturistico/crear-plantur
     AppRoutingModule
 
   ],
-  declarations: [ListarPlanturisticoComponent, PlanTuristicoDetailComponent, CrearPlanTuristicoComponent],
+  declarations: [ListarPlanturisticoComponent, PlanTuristicoDetailComponent, CrearPlanTuristicoComponent, ListarValoracionComponent, ValoracionComponent],
   providers: [PlanturisticoService],
   exports: [ListarPlanturisticoComponent],
 })

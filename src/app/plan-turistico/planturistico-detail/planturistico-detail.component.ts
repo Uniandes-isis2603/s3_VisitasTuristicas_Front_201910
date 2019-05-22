@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { PlanturisticoService } from '../planturistico.service';
 import { Planturistico } from '../planTuristico';
 import { PlanturisticoDetail } from '../planturistico-detail';
+
+import { ListarValoracionComponent } from '../listar-valoracion/listar-valoracion.component';
 @Component({
   selector: 'app-plan-turistico-detail',
   templateUrl: './planturistico-detail.component.html',
