@@ -8,4 +8,5 @@ export class Planturistico {
    guia: Boolean;
    duracion: String;
    idioma: String;
+   imagen: string;
  }

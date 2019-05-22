@@ -31,12 +31,9 @@ export class ListarPlanturisticoComponent implements OnInit {
     this.planTuristico_id = editorial_id;
     console.log("lol");
     this.selectedPlanTuristico = new PlanturisticoDetail();
-    this.planTuristicoService. getPlanTuristicoDetail(editorial_id).subscribe(o => {this.selectedPlanTuristico = o;
-    console.log("loler");
-    console.log(o);
-    console.log("lolest");
-    console.log(this.selectedPlanTuristico)}
+    this.planTuristicoService. getPlanTuristicoDetail(editorial_id).subscribe(o => {this.selectedPlanTuristico = o;}
     );
+    this.cambiarBoolean();
   }
 
   cambiarBoolean(): void{
