@@ -2,9 +2,11 @@
 {
     width: 100%;
 }
-.carousel-item{
-    width: 50vw !important;
+#datepicker{
+    width: 180px;
+    margin: 0 20px 20px 20px;
 }
-.imagen{
-    width: 50vw !important;
+
+#datepicker > span:hover{
+    cursor: pointer;
 }
