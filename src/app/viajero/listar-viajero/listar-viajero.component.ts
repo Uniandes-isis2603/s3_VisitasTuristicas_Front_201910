@@ -84,7 +84,7 @@ export class ListarViajeroComponent implements OnInit {
 * Muestra u oculta el componente de actualizar un viajero
 */
 showHideEdit(viajero_id: number): void {
-    if (!this.actualizar || (this.actualizar && viajero_id != this.selectedViajero.id)) {
+    if (!this.actualizar || (this.actualizar && viajero_id != this.selectedViajero.idUsuario)) {
         this.detail = false;
         this.crearCliente= false;
         this.actualizar = true;

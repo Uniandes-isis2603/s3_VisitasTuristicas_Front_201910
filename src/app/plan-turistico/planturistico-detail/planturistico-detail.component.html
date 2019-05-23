@@ -1,4 +1,5 @@
 <div class = "row">
+  <div class = "col-6">
     <table class="table table-striped table-sm">
       <thead class="table-primary">
         <tr>
@@ -23,6 +24,10 @@
         </tr>
       </tbody>
     </table>  
+  </div>
+<div class = "col-6">
+  <img src = {{planTuristicoDetail.imagen}} class="img-fluid"alt="Responsive image">
+</div>
 </div>
 <div class = "row">
   <div class = "col-6">
@@ -37,7 +42,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of planTuristicoDetail.blogsDeViajero">
+        <tr *ngFor="let i of planTuristicoDetail.blogs">
           <td style="cursor: pointer;">
             <a>{{i.id}}</a>
           </td>
@@ -58,4 +63,7 @@
       <p class="h3 p-3 text-center">Valoraciones</p>
       <app-listar-valoracion [valoracion]="planTuristicoDetail.valoraciones"></app-listar-valoracion>
   </div>
+</div>
+<div class = "row">
+    <app-adquirir-plan [planTuristico]="planTuristicoDetail"></app-adquirir-plan>
 </div>

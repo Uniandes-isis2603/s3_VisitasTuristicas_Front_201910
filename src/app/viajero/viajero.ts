@@ -1,7 +1,7 @@
 export class Viajero {
 
   /** El id del viajero en cuestion **/
-    id: Number;
+    idUsuario: Number;
 
   /** El nombre de usuario del viajero **/
     nombreUsuario: String;
@@ -15,6 +15,10 @@ export class Viajero {
   /** Información personal del viajero **/
     informacionPersonal: String;
 
-  /** Las preferencias de planes del viajero **/
-    preferencia: string;
-  }
+    preferencias: Array<Preferencias>;
+}
+
+class Preferencias{
+  nombrePreferencia: string;
+} 
+

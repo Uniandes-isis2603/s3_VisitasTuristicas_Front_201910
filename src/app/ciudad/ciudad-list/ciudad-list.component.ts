@@ -36,6 +36,7 @@ export class CiudadListComponent implements OnInit {
    */
   getCiudades(): void {
     this.ciudadService.getCiudades().subscribe(ciudades => this.ciudades = ciudades);
+    console.log(this.ciudades);
   }
 
   cambiarBoolean(): void {

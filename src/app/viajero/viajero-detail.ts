@@ -5,7 +5,7 @@ export class ViajeroDetail extends Viajero{
   facturas: Array<Factura> = [];
 
   /** La tarjeta de crédito del usuario **/
-  tarjetaDeCredito: TarjetaDeCredito;
+  tarjetas: Array<TarjetaDeCredito> = [];
 
 }
 

@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-12">
+        <br>
+        <h2 class="text-center">COMPRA TU PLAN AHORA</h2>
+        <br>
+        <form name="factura" (ngSubmit)="f.form.valid && createFactura()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="facturaDescripcion"><b>Numero de documento</b></label>
+                <input type="number"  name="facturaDescripcion" maxlength=255 class="form-control" id="facturaDescripcion" [(ngModel)]="idUsuario"
+                #facturaDescripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                required>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="facturaDescripcion"><b>Numero de personas a cotizar</b></label>
+                <input type="number"  name="facturaDescripcion" maxlength=255 class="form-control" id="facturaDescripcion" [(ngModel)]="personas"
+                #facturaDescripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && viajeroInformacionPersonal.invalid }"
+                required>
+                <div class="invalid-feedback">
+                    <div>Por favor introduzca información válida</div>
+                </div>
+            </div>
+            <p>Confirmacion</p>
+            <p class = "mejor-nombre">{{planTuristico.nombrePlan}}</p>
+            <p>Costo total</p>
+            <p class = "mejor-nombre">${{planTuristico.costoPorPersona * personas}}</p>
+            <div class="row form-inline justify-content-center align-self-center">
+              <button type="submit" class="btn btn-success">name>Crear factura</button>
+              <div class="divider"></div>
+            </div>
+        </form>
+  </div>

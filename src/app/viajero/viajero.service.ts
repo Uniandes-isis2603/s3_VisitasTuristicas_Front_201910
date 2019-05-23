@@ -26,15 +26,15 @@ export class ViajeroService {
    * Retorna la lista de Viajeros como observables que se encuentran en la base de datos
    */
   getViajeros() : Observable<Viajero[]> {
-        return this.http.get<Viajero[]>(API_URL + clientes);
+        return this.http.get<Viajero[]>('http://localhost:8080/s3_turismo-api/api/viajero/');
   }
 
   /**
    * Obtiene un observable del viajero que entra por id si se encuentra en la base de datos
    */
   getViajeroDetail(viajeroId): Observable<ViajeroDetail> {
-    console.log(viajeroId+" "+API_URL + "data-" + viajeroId+".json");
-    return this.http.get<ViajeroDetail>(API_URL + "viajeros-" + viajeroId+".json");
+    console.log(viajeroId);
+    return this.http.get<ViajeroDetail>('http://localhost:8080/s3_turismo-api/api/viajero/' + viajeroId);
   }
 
   /**
@@ -84,7 +84,7 @@ export class ViajeroService {
    * @param viajero_id el id del viajero a quien voy a modificar la tarjeta
    * @param tarjeta la tarjeta que va a ser modificada
    */
-  updateTarjeta(viajero_id,tarjeta): Observable<TarjetaDeCredito> {
-    return this.http.put<TarjetaDeCredito>(API_URL + "viajeros/" + viajero_id+"/tarjetas/"+tarjeta.id, tarjeta);
+  updateTarjeta(viajero_id,idtarjeta,tarjeta): Observable<TarjetaDeCredito> {
+    return this.http.put<TarjetaDeCredito>('http://localhost:8080/s3_turismo-api/api/viajero/' + viajero_id + '/' + idtarjeta , tarjeta);
   }
 }

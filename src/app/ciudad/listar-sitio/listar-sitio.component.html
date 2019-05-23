@@ -5,8 +5,9 @@
           <h1>SITIOS TURISTICOS</h1>
         </div>
         <div id = "color">
-          <div *ngFor="let i of ciudadDetail.sitios">
+          <div *ngFor="let i of ciudadDetail.sitiosTuristicosDto">
             <b><a style="cursor: pointer;" (click)="onSelected(i.id)">{{i.nombre}}</a></b>
+            <img src = {{i.imagen}}  class="img-fluid"alt="Responsive image">
           </div>
         </div>
       </div>

@@ -5,8 +5,10 @@ import { Ciudad } from './ciudad';
 import { CiudadDetail } from './ciudad-detail';
 import { Observable } from 'rxjs';
 
-const API_URL = "../../assets/";
-const ciudades = 'ciudades.json';
+import { environment } from '../../environments/environment';
+
+const API_URL = environment.apiURL;
+const ciudades = '/ciudades';
 
 /**
 * El servicio proveedor de todo lo relacionado a las ciudades 
@@ -22,7 +24,7 @@ export class CiudadService {
     
   
     getCiudades() : Observable<Ciudad[]> {
-        return this.http.get<Ciudad[]>(API_URL + ciudades);
+        return this.http.get<Ciudad[]>('http://localhost:8080/s3_turismo-api/api/ciudades/');
     }
 
      /**
@@ -31,7 +33,7 @@ export class CiudadService {
     */
     getCiudadDetail(ciudadId): Observable<CiudadDetail> {
       console.log(ciudadId+" "+API_URL + "ciudad-" + ciudadId+".json");
-        return this.http.get<CiudadDetail>(API_URL + "ciudad-" + ciudadId+".json");
+        return this.http.get<CiudadDetail>('http://localhost:8080/s3_turismo-api/api/ciudades/' + ciudadId);
     }
     
         /**

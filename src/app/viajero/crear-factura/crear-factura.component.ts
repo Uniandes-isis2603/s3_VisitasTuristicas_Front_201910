@@ -44,7 +44,7 @@ export class CrearFacturaComponent implements OnInit, OnChanges {
      */
     createFactura(): Factura{
         console.log(this.factura);
-        this.viajeroService.createFactura(this.viajero.id,this.factura)
+        this.viajeroService.createFactura(this.viajero.idUsuario,this.factura)
             .subscribe(() => {
                 this.updateReviews.emit();
             })

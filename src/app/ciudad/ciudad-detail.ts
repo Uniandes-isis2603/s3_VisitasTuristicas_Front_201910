@@ -1,7 +1,7 @@
 import {Ciudad} from "./ciudad";
 
 export class CiudadDetail extends Ciudad{
-  sitios: Array<SitioTuristico> = [];
+  sitiosTuristicosDto: Array<SitioTuristico> = [];
 }
 class SitioTuristico {
   id: number;

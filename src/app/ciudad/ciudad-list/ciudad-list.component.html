@@ -7,7 +7,7 @@
       </div>
       <div id = "color">
         <div *ngFor="let i of ciudades">
-          <b><a style="cursor: pointer;" (click)="onSelected(i.id)">{{i.name}}</a></b>
+          <b><a style="cursor: pointer;" (click)="onSelected(i.id)">{{i.nombre}}</a></b>
         </div>
       </div>
       <div *ngIf = "selectedCiudad">

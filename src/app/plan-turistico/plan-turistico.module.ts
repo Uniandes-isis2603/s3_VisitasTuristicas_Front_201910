@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CrearPlanTuristicoComponent } from './crear-planturistico/crear-planturistico.component';
 import { ListarValoracionComponent } from './listar-valoracion/listar-valoracion.component';
 import { ValoracionComponent } from './valoracion/valoracion.component';
+import { AdquirirPlanComponent } from './adquirir-plan/adquirir-plan.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { ValoracionComponent } from './valoracion/valoracion.component';
     AppRoutingModule
 
   ],
-  declarations: [ListarPlanturisticoComponent, PlanTuristicoDetailComponent, CrearPlanTuristicoComponent, ListarValoracionComponent, ValoracionComponent],
+  declarations: [ListarPlanturisticoComponent, PlanTuristicoDetailComponent, CrearPlanTuristicoComponent, ListarValoracionComponent, ValoracionComponent, AdquirirPlanComponent],
   providers: [PlanturisticoService],
   exports: [ListarPlanturisticoComponent],
 })

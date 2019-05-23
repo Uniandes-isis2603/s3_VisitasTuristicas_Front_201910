@@ -11,11 +11,9 @@ export class Ciudad {
     /**
     * El nombre de la ciudad
     */
-    name: string;
+    nombre: string;
 
     imagen: string;
 
-    description: string;
-  
-
+    descripcion: string;
 }

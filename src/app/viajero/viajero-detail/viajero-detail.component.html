@@ -4,7 +4,9 @@
       <p class="h1 p-3 text-center">Información del usuario:</p>
       <p class="p-3 text-justify"> {{viajeroDetail.informacionPersonal}}</p>
       <p class="h1 p-3 text-center">Preferencias:</p>
-      <p class="p-3 text-justify"> {{viajeroDetail.preferencia}}</p>
+      <div *ngFor = "let i of viajeroDetail.preferencias">
+        <p class="h1 p-3 text-center">{{i.nombrePreferencia}}</p>
+      </div>
   </div>
   <div class = "row">
     <div class = "col-6">
@@ -20,15 +22,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor= "let i of viajeroDetail.tarjetas">
           <td style="cursor: pointer;">
-            <a>{{viajeroDetail.tarjetaDeCredito.numero}}</a>
+            <a>{{i.numero}}</a>
           </td>
           <td style="cursor: pointer;">
-            <p class="figure-caption">{{viajeroDetail.tarjetaDeCredito.banco}}</p>
+            <p class="figure-caption">{{i.banco}}</p>
           </td>
           <td style="cursor: pointer;">
-            <p class="figure-caption">{{viajeroDetail.tarjetaDeCredito.codigoSeguridad}}</p>
+            <p class="figure-caption">{{i.codigoSeguridad}}</p>
           </td>
           <td>
             <button class="btn btn-outline-warnig" (click) = "mostrarActualizarTarjeta(viajeroDetail.tarjetaDeCredito)"><span class="fa fa-pencil"></span></button>

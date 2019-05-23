@@ -45,10 +45,6 @@ export class UpdateTarjetaComponent implements OnInit {
 */
 editTarjeta(): void {
     this.update.emit();
-    this.viajeroService.updateTarjeta(this.viajero.id, this.tarjeta)
-        .subscribe(() => {
-            
-        });
 }
 
 /**

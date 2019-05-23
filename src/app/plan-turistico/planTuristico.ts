@@ -1,8 +1,8 @@
 export class Planturistico {
-    id: Number;
+  planTuristicoId: Number;
    nombrePlan: String;
    tipoPlan: String;
-   costoPorPersona: Number;
+   costoPorPersona: number;
    descripcion: String;
    ubicacion: String;
    guia: Boolean;

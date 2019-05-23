@@ -42,15 +42,6 @@ export class CrearViajeroComponent implements OnInit {
   /**
    * Crea el cliente y lo persiste
    */
-  createCliente(): ViajeroDetail {
-    this.viajeroDetail.tarjetaDeCredito=this.tarjeta;
-    console.log(this.viajeroDetail);
-    this.viajeroService.createViajero(this.viajeroDetail)
-    .subscribe((viajero) => {
-      this.viajeroDetail = viajero;
-    });
-    return this.viajeroDetail;
-  }
 
   /**
    * Crea la tarjeta de credito del viajero

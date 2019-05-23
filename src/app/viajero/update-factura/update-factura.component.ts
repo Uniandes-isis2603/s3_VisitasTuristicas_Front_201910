@@ -45,7 +45,7 @@ export class UpdateFacturaComponent implements OnInit {
 */
 editFactura(): void {
     this.update.emit();
-    this.viajeroService.updateFactura(this.viajero.id, this.factura)
+    this.viajeroService.updateFactura(this.viajero.idUsuario, this.factura)
         .subscribe(() => {
             
         });
