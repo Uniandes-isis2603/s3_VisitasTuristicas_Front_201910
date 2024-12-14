@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-12">
+        <br>
+        <h2 class="text-center">Editar la tarjeta</h2>
+        <br>
+        <form name="tarjetaDeCredito" (ngSubmit)="f.form.valid && createTarjeta()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="tarjetaNumero"><b>Numero de la tarjeta</b></label>
+              <input type="text" name="tarjetaNumero" class="form-control" id="tarjetaNumero" [(ngModel)]="tarjeta.numero"
+                  #tarjetaNumero="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaNumero.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un número válido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tarjetaBanco"><b>Banco de la tarjeta</b></label>
+              <input type="text" name="tarjetaBanco" class="form-control" id="tarjetaBanco" [(ngModel)]="tarjeta.banco"
+                  #tarjetaBanco="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaBanco.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un banco válido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tarjetaCodigo"><b>Código de seguridad</b></label>
+              <input type="number" name="tarjetaCodigo" class="form-control" id="tarjetaCodigo" [(ngModel)]="tarjeta.codigoSeguridad"
+                  #tarjetaCodigo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tarjetaCodigo.invalid }" required>
+              <div class="invalid-feedback">
+                  <div>Introducir un banco válido</div>
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div class="row form-inline justify-content-center align-self-center">
+            <i  style="padding-right: 1em;"class="fa fa-save " (click)="editTarjeta()"></i>
+          
+            <i class="fa fa-ban" (click)="cancelEdition()"></i>
+        </div>
+    </div>
+  </div>
+  <br>
+  <br>

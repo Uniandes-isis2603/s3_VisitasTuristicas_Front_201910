@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Edit a viajero</h2>
+        <br>
+        <form name="viajero" (ngSubmit)="f.form.valid && editViajero()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="idUsuario"><b>ID</b></label>
+                <input type="text" name="idUsuario" class="form-control" id="idUsuario" [(ngModel)]="viajero.idUsuario"
+                    #idUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && idUsuario.invalid }"
+                    required>
+                <div class="invalid-feedback">
+                    <div>Id invalido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nombreUsuario"><b>Nombre</b></label>
+                <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" [(ngModel)]="viajero.nombreUsuario"
+                    #nombreUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nombreUsuario.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>El nombre no es valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="codigoUnico"><b>Codigo</b></label>
+                <input type="text" name="codigoUnico" class="form-control" id="codigoUnico" [(ngModel)]="viajero.codigoUnico"
+                    #codigoUnico="ngModel" [ngClass]="{ 'is-invalid': f.submitted && codigoUnico.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>El codigo no es valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="idioma"><b>Idioma</b></label>
+                <input type="text" name="idioma" class="form-control" id="idioma" [(ngModel)]="viajero.idioma"
+                    #idioma="ngModel" [ngClass]="{ 'is-invalid': f.submitted && idioma.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>El idioma no es valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tipoDeUsuario"><b>Tipo de Usuario</b></label>
+                <input type="text" name="tipoDeUsuario" class="form-control" id="tipoDeUsuario" [(ngModel)]="viajero.tipoDeUsuario"
+                    #tipoDeUsuario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tipoDeUsuario.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>El tipo no es valido</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cantidadPlanes"><b>Cantidad Planes</b></label>
+                <input type="text" name="cantidadPlanes" class="form-control" id="cantidadPlanes" [(ngModel)]="viajero.cantidadPlanes"
+                    #cantidadPlanes="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cantidadPlanes.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>La cantidad de planes no es valida</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="informacionPersonal"><b>Informacion Personal</b></label>
+                <input type="text" name="informacionPersonal" class="form-control" id="informacionPersonal" [(ngModel)]="viajero.informacionPersonal"
+                    #informacionPersonal="ngModel" [ngClass]="{ 'is-invalid': f.submitted && informacionPersonal.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>La informacion no es valida</div>
+                </div>
+            </div>
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Edit</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelEdition()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
